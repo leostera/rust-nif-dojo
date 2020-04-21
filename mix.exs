@@ -1,4 +1,4 @@
-defmodule BinBuf.MixProject do
+defmodule RustNif.MixProject do
   use Mix.Project
 
   def project do
@@ -11,7 +11,7 @@ defmodule BinBuf.MixProject do
 
   defp deps do
     [
-      {:rustler, "0.21.0"}
+      { :rustler, "0.21.0" },
     ]
   end
 end

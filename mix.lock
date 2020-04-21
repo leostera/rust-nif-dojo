@@ -1,0 +1,5 @@
+%{
+  "eflame": {:hex, :eflame, "1.0.1", "0664d287e39eef3c413749254b3af5f4f8b00be71c1af67d325331c4890be0fc", [:mix], [], "hexpm", "e0b08854a66f9013129de0b008488f3411ae9b69b902187837f994d7a99cf04e"},
+  "rustler": {:hex, :rustler, "0.21.0", "68cc4fc015d0b9541865ea78e78e9ef2dd91ee4be80bf543fd15791102a45aca", [:mix], [{:toml, "~> 0.5.2", [hex: :toml, repo: "hexpm", optional: false]}], "hexpm", "e5429378c397f37f1091a35593b153aee1925e197c6842d04648d802edb52f80"},
+  "toml": {:hex, :toml, "0.5.2", "e471388a8726d1ce51a6b32f864b8228a1eb8edc907a0edf2bb50eab9321b526", [:mix], [], "hexpm", "f1e3dabef71fb510d015fad18c0e05e7c57281001141504c6b69d94e99750a07"},
+}
