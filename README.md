@@ -1,36 +1,41 @@
-# Hello, GUI
+# Safe and Fast NIFs with Rust(ler)!
 
-The two goals behind the project are:
+In this tiny dojo repository we'll be exposed to the creation of [Natively
+Implemented Functions for the BEAM](http://erlang.org/doc/man/erl_nif.html)
+using the [Rust programming language](https://www.rust-lang.org/) and the
+[Rustler project](https://github.com/rusterlium/rustler).
 
-1. To prove that we can build a high-performance massively parallel graphical
-   user system
-2. To provide a reflective, self-hosted environment in which to build Erlang
-   systems in the spirit of Smalltalk
+The core premise here is that Rust, being a performant, reliable, and
+productive language, is an excellent choice for building libraries that require
+native support, for those use-cases where executing Erlang or Elixir code is
+just not enough, or where a good Rust library is already available.
 
-## Architecture
+In particular, we will be creating a tiny module implementing a
+dynamically-sized binary buffer that is:
 
-Currently the main project is split into 2 layers, from the top down:
+* safe, and should never crash the BEAM, and
+* fast!
 
-1. **Chalk**, a high-level graphics pipeline that leverages Erlang's SMP.
+## Prerequisites
 
-2. A set of NIFs and Ports written in Rust to interact with native libraries
-   that provide hardware accelerated graphics.
+To get started, please follow the installation guide from [Getting Started at
+Rust-lang.org](https://www.rust-lang.org/learn/get-started). It should take a
+couple of minutes, and the tooling is entirely self-contained. If you are on a
+UNIX-like, you'll end up running this installer:
 
-On top of Chalk, we can build libraries for:
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-1. Writing any kind of GUI applications
+You will only be using `rustup` to manage the Rust toolchain, as the rest will
+be handled via `mix`. Make sure you also have `mix`.
 
-2. Writing games, interactive media, and digital art
+While knowledge about systems programming and type-systems is useful, we will be
+limiting the actual Rust code to the smallest possible examples.
 
-On top of which we can build an interactive environment for building Erlang
-systems, that runs within Erlang, in Erlang, and allows you to visualize, edit,
-and modify the code of the running system as it runs.
 
-## Motivation
+## Additional documentation
 
-As part of the StageVM project, Hello GUI aims to explore the required
-abstractions to efficiently build and run GUI applications that continue to
-enjoy [The Free Lunch](the free lunch is over link).
-
-In addition, the process will help evaluate the difficulties in extending an
-actor runtime system to access native resources with minimum overhead.
+If you're interested in learning more about Rust, the [The Rust Programming
+Language book](https://doc.rust-lang.org/stable/book/) is a fantastic
+reference.
